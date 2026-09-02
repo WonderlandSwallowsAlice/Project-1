@@ -38,12 +38,21 @@ public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>
 
     public V remove(K key)
     {
-        if (key)
+        for(int i = 0; i < cache.size(); i++)
+        {
+        if (cache.get(i).getKey().equals(key))
+        {
+            V removed = cache.remove(i);
+            return removed; 
+        }
+        }
+    return null; 
+
     }
 
     public void clear()
     {
-
+        cache.clear(); 
     }
     public String toString()
     {
