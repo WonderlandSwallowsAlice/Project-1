@@ -8,7 +8,7 @@ public interface CacheInterface<K, V extends KeyInterface<K>> {
     /**
      * TODO - complete the javadoc here
      * @param key
-     * @return
+     * @return 
      */
     public V get(K key);
 
@@ -22,7 +22,7 @@ public interface CacheInterface<K, V extends KeyInterface<K>> {
     /**
      * TODO - complete the javadoc here
      * @param key
-     * @return
+     * @return last item 
      */
     public V remove(K key);
 
