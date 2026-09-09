@@ -2,7 +2,7 @@ import java.util.LinkedList;
 
 public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>{
 
-    private LinkedList<V> cache;
+    private final LinkedList<V> cache;
     private Integer cacheMaxSize=0;
     private Integer references =0;
     private Integer hits=0; 
@@ -10,10 +10,10 @@ public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>
 
     public Cache(int size) {
     this.cacheMaxSize = size; 
-	this.cache = new LinkedList<V>();
+	this.cache = new LinkedList<>();
     }
 
-    public V get(K key)
+    public @Override V get(K key)
     {
         references++; 
     for (int i = 0; i < cache.size(); i++) 
@@ -29,7 +29,7 @@ public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>
         return null; 
     }
 
-    public V add(V value)
+    public @Override V add(V value)
     {
         if (cache.size() >= cacheMaxSize)
         {
@@ -45,7 +45,7 @@ public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>
         }
     }
 
-    public V remove(K key)
+    public @Override V remove(K key)
     {
         for(int i = 0; i < cache.size(); i++)
         {
@@ -59,21 +59,22 @@ public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>
 
     }
 
-    public void clear()
+    public @Override void clear()
     {
         cache.clear(); 
     }
 
-    public String toString()
+    public @Override String toString()
     {  
         percentage = Math.round((hits/references)*100.0/100.0); 
-        String output = ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n" 
-                         + "Cache with" + cacheMaxSize + "entries has been created \n" 
+        String output = ("""
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+                         Cache with""" + cacheMaxSize + "entries has been created \n" 
                         + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n" 
                         + "Total number of references: " + references + "\n" 
                         + "Total number of cache hits: " + hits + "\n"
                         + "Cache hit percent: " + percentage + "\n");
-        return output;  
+        return output;      
     }
 
 }
