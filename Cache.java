@@ -6,7 +6,6 @@ public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>
     private Integer cacheMaxSize=0;
     private Integer references =0;
     private Integer hits=0; 
-    private double percentage =0; 
 
     public Cache(int size) {
     this.cacheMaxSize = size; 
@@ -66,10 +65,10 @@ public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>
 
     public @Override String toString()
     {  
-        percentage = Math.round((hits/references)*100.0/100.0); 
+        double percentage = ((double)hits/references)*100.0; 
         String output = ("""
                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-                         Cache with""" + cacheMaxSize + "entries has been created \n" 
+                         Cache with """ + cacheMaxSize + " entries has been created \n" 
                         + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n" 
                         + "Total number of references: " + references + "\n" 
                         + "Total number of cache hits: " + hits + "\n"
