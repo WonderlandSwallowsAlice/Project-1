@@ -7,18 +7,25 @@ public class CacheExperiment
         double stanDev = Double.parseDouble(args[2]); 
         int debugLev = Integer.parseInt(args[3]);
 
-        WebpageGenerator genPage = new WebpageGenerator(30, 0.30);
-        Cache<String, Webpage> cache = new Cache<>(40);
+        long startTime = System.currentTimeMillis();
+        WebpageGenerator genPage = new WebpageGenerator(numWebpages, stanDev);
+        Cache<String, Webpage> cache = new Cache<>(cacheSize);
+       
         for (int i = 0; i < numWebpages; i++)
         {
+            
             String url = genPage.getURL();
+            
             Webpage found = cache.get(url);
             if(found == null)
             {
-            Webpage page = new Webpage(url); 
-            cache.add(page); 
+            Webpage newWeb = genPage.readPage(url); 
+            cache.add(newWeb);  
             }
         }    
+        long currentTime = System.currentTimeMillis();
+        long timeElapsed = currentTime - startTime; 
+        System.out.println("Time elapsed: " + timeElapsed);
         System.out.println(cache);
     }
 }
