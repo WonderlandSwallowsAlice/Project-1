@@ -62,7 +62,7 @@ public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>
     {
         cache.clear(); 
     }
-
+ 
     public @Override String toString()
     {  
         double percentage = ((double)hits/references)*100.0; 
