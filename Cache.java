@@ -66,13 +66,14 @@ public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>
     public @Override String toString()
     {  
         double percentage = ((double)hits/references)*100.0; 
+        String perc2Dec = String.format("%.2f", percentage);
         String output = ("""
                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-                         Cache with """ + cacheMaxSize + " entries has been created \n" 
+                         Cache with  """ + cacheMaxSize + " entries has been created \n" 
                         + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n" 
                         + "Total number of references: " + references + "\n" 
                         + "Total number of cache hits: " + hits + "\n"
-                        + "Cache hit percent: " + percentage + "\n");
+                        + "Cache hit percent: " + perc2Dec + "%\n"); 
         return output;      
     }
 
