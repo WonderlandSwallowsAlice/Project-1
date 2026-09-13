@@ -11,13 +11,21 @@ There are 2 ways to run this program:
 
 Levels of debug: 
 There are 4 total levels of debugging that provide different outputs:
+
 Level 0 or case 0: Stats
+
 <img width="507" height="181" alt="image" src="https://github.com/user-attachments/assets/9654137d-1f32-442c-bbbc-4451c2f2c399" />
+
 Level 1 or case 1: Webpage Distribution and Stats
+
 <img width="527" height="650" alt="image" src="https://github.com/user-attachments/assets/ea195a7f-3a08-4f33-af3c-8aa2b2e9e433" />
+
 Level 2 or case 2: Webpages URLS and Webpage Summary
+
 <img width="1005" height="627" alt="image" src="https://github.com/user-attachments/assets/68559dad-160e-4359-a4d1-239dfd040c8e" />
+
 Level 3 or case 3: Webpages URLS and Full Webpage Content
+
 <img width="1006" height="620" alt="image" src="https://github.com/user-attachments/assets/d168910b-ab5f-4fd6-b6e6-9be36b427b47" />
 
 
