@@ -30,11 +30,13 @@ Level 3 or case 3: Webpages URLS and Full Webpage Content
 
 
 AI usage: 
+
 For this project I had to use copilot to make the junit jupiter work (I usually have it turned off but this was my last hope). I followed the instructions provided by the professor on how to get the junit jupiter working for VS code, tried troubleshooting techniques provided in the document, tried different versions of junit jupiter as well as reinstalling all the Java extensions and restarting both VS code and my computer. I was not able to make it work until I got my other laptop, installed VS code there and asked copilot to run the commands to make the junit jupiter work and it finally did. I think I spent about 5 hours of just trying fight this issue. It still says that the import org.junit cannot be resolved but at least I was able to make the program compile. Before it was giving me the error that such package does not exist that was not going away. I assume it could be some folder hierarchy issue but adjusting it at least the way I did it, did not help. 
 
 I also used it to explain me some parts of the existing code, mostly syntax that I could not understand myself and since this is my first program that I wrote in Java (I only used C and C++ before) I asked it to give me different examples of some of the syntax that I knew how to write in C++ that I was not able to find examples of in the resources cited below, provided by the instructor or in some of files already provided with this project. 
 
 Other resources used in this project:
+
 https://www.w3schools.com/java
 https://www.geeksforgeeks.org/java
 https://math.hws.edu/javanotes/c5/s1.html#OOP.1.1
