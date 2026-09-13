@@ -66,6 +66,7 @@ public class CacheExperiment
                System.out.println("Generated and serialized Webpages\n");
                System.out.println("=========================================\n");
                genPage.printWebpages(2);
+               System.out.println(cache);
                 break;
             //Case 3: similar to case 2, but prints the full content of the webpages
             //using printWebpages() with the debug level 3 argument provided by the 
@@ -75,6 +76,7 @@ public class CacheExperiment
                System.out.println("URLs and Full Webpages\n");
                System.out.println("=========================================\n");
                genPage.printWebpages(3);
+               System.out.println(cache);
                 break;
             //Default case: if user enters invalid debug level. 
             default:
