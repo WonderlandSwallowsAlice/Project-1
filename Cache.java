@@ -18,7 +18,7 @@ public class Cache<K, V extends KeyInterface<K>> implements CacheInterface<K, V>
     //in the cache using addFirst(). While in the loop it also increments
     //hits that later used to calculate the hit percentage. References are 
     //incremented every time the get function is called. When the function 
-    //found the object it returns it, else it returns null.
+    //found the object, it returns it, else it returns null.
     public @Override V get(K key)
     {
         references++; 
